@@ -1,0 +1,21 @@
+/* General Layout in my demos */
+
+/* Numeric Navigation */
+/*.controls{ position:absolute; bottom:30px; width:100%; }
+*/
+ol.numericControls { max-width:990px; margin:0 auto; text-align:center; position:relative; bottom:; padding:33px 0 43px 0;}
+ol.numericControls li{margin:0 7px 0 0;float:none;list-style:none; font-size:0;  height:8px; display:inline-block;border-radius:0;   }
+ol.numericControls li a{ background:#fff; width:59px; height:8px; border-radius:0; display:block;}
+ol.numericControls li.current a{background:#000; display:block;  }
+ol.numericControls li a:focus, .prevBtn a:focus, .nextBtn a:focus{outline:none;}
+
+/*ol.numericControls { width:1000px; margin:0 auto; text-align:right;}*/
+@media( max-width:1000px){
+
+	
+}
+
+@media( max-width:767px){
+
+	
+}

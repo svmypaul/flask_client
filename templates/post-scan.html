@@ -1,0 +1,1271 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1.0,user-scalable=0">
+	<title>S.I International</title>
+	<link href="{{ url_for('static', filename='css/bootstrap.css') }}" rel="stylesheet">
+	<link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+	<link href="{{ url_for('static', filename='css/font-awesome.min.css') }}" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/animate.css') }}" type="text/css">
+	<link href="{{ url_for('static', filename='css/owl.carousel.css') }}" rel="stylesheet">
+	<link href="{{ url_for('static', filename='css/owl.theme.css') }}" rel="stylesheet">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/jquery.fancybox.min.css') }}" type="text/css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretty-checkbox@3.0/dist/pretty-checkbox.min.css" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;900&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Mulish:wght@500&family=Poppins&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Mulish:wght@500;700&family=Poppins&display=swap" rel="stylesheet">
+	<!-- Font Icons CSS -->
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/ionicons.css') }}">
+	<!-- Droopmenu CSS -->
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/droopmenu.css') }}">
+	<link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-straight/css/uicons-regular-straight.css'>
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/uicons-regular-rounded.css') }}">
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+	<div class="myheader">
+		<div class="wrap2 navbar-custom navbar-fixed-top">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-2 logo_div wow fadeIn">
+						<a href="index.html"><img src="{{ url_for('static', filename='images/logo.png') }}" class="img-responsive" alt="" /></a>
+					</div>
+					<div class="col-md-10 navigation_top">
+						<div class="droopmenu-navbar right_nav">
+							<div class="droopmenu-inner">
+								<div class="droopmenu-header">
+									<a href="index.html" class="droopmenu-brand visible-sm visible-xs"><img src="{{ url_for('static', filename='images/bird.png') }}" class="img-responsive center-block" alt=""></a>
+									<a href="#" class="droopmenu-toggle"></a>
+								</div>
+								<!-- droopmenu-header -->
+								<div class="droopmenu-nav">
+									<ul class="droopmenu">
+										<li> <a href="index.html" class="active">Home</a> </li>
+										<li> <a href="#">Post a Job</a> </li>
+										<li> <a href="#">Find Resume</a></li>
+										<li> <a href="#">Contact Us</a> </li>
+										<li> <a href="#">{{username}}</a> </li>
+									</ul>
+								</div>
+								<!-- droopmenu-nav -->
+							</div>
+							<!-- droopmenu-inner -->
+						</div>
+						<!-- droopmenu-navbar  -->
+					</div>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+	</div>
+	<div class="container banner_top">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="inner_banner"> <img src="{{ url_for('static', filename='images/banner_4.jpg') }}" class="img-responsive center-block" alt="" />
+					<div class="inner_banner_text wow slideInLeft">
+						<h2><span>Dashboard</span></h2> </div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container pj_form_outer">
+		<div class="row hidden-lg hidden-md mobile_filter">
+			<div class="col-md-12">
+				<ul>
+					<li><a href="#" data-toggle="collapse" data-target="#demo" class="filter_btns">Filters</a></li>
+					<li><a href="#" data-toggle="collapse" data-target="#demo2" class="filter_btns"><i class="fa fa-filter" aria-hidden="true"></i></a></li>
+				</ul>
+				<div id="demo" class="collapse">
+					<div class="filter_bar">
+						<h4>Created Date</h4> </div>
+					<div class="content2">
+						<ul>
+							<li>
+								<a href="#">
+									<div class="pretty p-default">
+										<input type="checkbox" id="option" />
+										<div class="state">
+											<label>Last 7 Days</label>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<div class="pretty p-default">
+										<input type="checkbox" />
+										<div class="state">
+											<label>Last 14 Days</label>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<div class="pretty p-default">
+										<input type="checkbox" />
+										<div class="state">
+											<label>Last 21 Days</label>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<div class="pretty p-default">
+										<input type="checkbox" />
+										<div class="state">
+											<label>Last 28 Days</label>
+										</div>
+									</div>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="clearfix"></div>
+					<div class="accordion-container">
+						<div class="set"> <a href="#">
+      Section 
+      <i class="fa fa-plus"></i>
+    </a>
+							<div class="content">
+								<ul class="mob_list">
+									<li>
+										<a href="#">
+											<div class="pretty p-default">
+												<input type="checkbox" id="option" />
+												<div class="state p-info">
+													<label>Option A</label>
+												</div>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<div class="pretty p-default">
+												<input type="checkbox" />
+												<div class="state p-info">
+													<label>Option B</label>
+												</div>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<div class="pretty p-default">
+												<input type="checkbox" />
+												<div class="state p-info">
+													<label>Option C</label>
+												</div>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<div class="pretty p-default">
+												<input type="checkbox" />
+												<div class="state p-info">
+													<label>Option D</label>
+												</div>
+											</div>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						
+								
+							
+							<div class="set"> <a href="#">
+      Keywords 
+      <i class="fa fa-plus"></i>
+    </a>
+								<div class="content">
+									<ul class="mob_list">
+										<li>
+											<a href="#">
+												<div class="pretty p-default">
+													<input type="checkbox" id="option" />
+													<div class="state p-info">
+														<label>Option A</label>
+													</div>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<div class="pretty p-default">
+													<input type="checkbox" />
+													<div class="state p-info">
+														<label>Option B</label>
+													</div>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<div class="pretty p-default">
+													<input type="checkbox" />
+													<div class="state p-info">
+														<label>Option C</label>
+													</div>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<div class="pretty p-default">
+													<input type="checkbox" />
+													<div class="state p-info">
+														<label>Option D</label>
+													</div>
+												</div>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+							
+							
+							<div class="set"> <a href="#">
+      Location 
+      <i class="fa fa-plus"></i>
+    </a>
+								<div class="content">
+									<ul class="mob_list">
+										<li>
+											<a href="#">
+												<div class="pretty p-default">
+													<input type="checkbox" id="option" />
+													<div class="state p-info">
+														<label>Option A</label>
+													</div>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<div class="pretty p-default">
+													<input type="checkbox" />
+													<div class="state p-info">
+														<label>Option B</label>
+													</div>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<div class="pretty p-default">
+													<input type="checkbox" />
+													<div class="state p-info">
+														<label>Option C</label>
+													</div>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<div class="pretty p-default">
+													<input type="checkbox" />
+													<div class="state p-info">
+														<label>Option D</label>
+													</div>
+												</div>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+							
+							
+							<div class="set"> <a href="#">
+      Experience In Years 
+      <i class="fa fa-plus"></i>
+    </a>
+								<div class="content">
+									
+									<div class="row margin1">
+								<div class="col-xs-12 col-md-5">
+									<input type="text" class="form-control" placeholder="Min"> </div>
+								<div class="col-xs-12 col-md-2 to_div">to</div>
+								<div class="col-xs-12 col-md-5">
+									<input type="text" class="form-control" placeholder="Max"> </div>
+								<div class="clearfix"></div>
+							</div>
+							<div class="clearfix"></div>
+									
+									
+									
+									
+								</div>
+							</div>
+							
+								<div class="set"> <a href="#">
+      Department 
+      <i class="fa fa-plus"></i>
+    </a>
+								<div class="content">
+									<ul class="mob_list">
+										<li>
+											<a href="#">
+												<div class="pretty p-default">
+													<input type="checkbox" id="option" />
+													<div class="state p-info">
+														<label>Option A</label>
+													</div>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<div class="pretty p-default">
+													<input type="checkbox" />
+													<div class="state p-info">
+														<label>Option B</label>
+													</div>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<div class="pretty p-default">
+													<input type="checkbox" />
+													<div class="state p-info">
+														<label>Option C</label>
+													</div>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<div class="pretty p-default">
+													<input type="checkbox" />
+													<div class="state p-info">
+														<label>Option D</label>
+													</div>
+												</div>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+							
+							<div class="set"> <a href="#">
+      Industry 
+      <i class="fa fa-plus"></i>
+    </a>
+								<div class="content">
+									<ul class="mob_list">
+										<li>
+											<a href="#">
+												<div class="pretty p-default">
+													<input type="checkbox" id="option" />
+													<div class="state p-info">
+														<label>Option A</label>
+													</div>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<div class="pretty p-default">
+													<input type="checkbox" />
+													<div class="state p-info">
+														<label>Option B</label>
+													</div>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<div class="pretty p-default">
+													<input type="checkbox" />
+													<div class="state p-info">
+														<label>Option C</label>
+													</div>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<div class="pretty p-default">
+													<input type="checkbox" />
+													<div class="state p-info">
+														<label>Option D</label>
+													</div>
+												</div>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						
+						
+						
+						
+						
+						
+						
+						
+					</div>
+				</div>
+				<div id="demo2" class="collapse">
+					<div class="manage_folders">
+						<div class="manage_top">
+							<div class="row mid_coll_wrap">
+								<div class="col-md-2 mid_coll">
+									<div class="pretty p-default">
+										<input type="checkbox" />
+										<div class="state p-info">
+											<label>Select All </label>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-2 mid_coll"> <a href="javascript:void(0);" class="collapsed btn btn_new1" data-toggle="collapse" data-target="#bar-a"><i class="fa fa-file" aria-hidden="true"></i>
+ Add to
+																
+																
+																<i class="fa fa-fw fa-chevron-down"></i>
+                                                                <i class="fa fa-fw fa-chevron-right"></i>
+																
+																</a>
+									<ul class="collapse" id="bar-a">
+										<li>
+											<div class="pretty p-default">
+												<input type="checkbox" />
+												<div class="state p-info">
+													<label>Option A</label>
+												</div>
+											</div>
+										</li>
+										<li>
+											<div class="pretty p-default">
+												<input type="checkbox" />
+												<div class="state p-info">
+													<label>Option B</label>
+												</div>
+											</div>
+										</li>
+									</ul>
+								</div>
+								<div class="col-md-2 mid_coll"> <a href="javascript:void(0);" class="collapsed btn btn_new1" data-toggle="collapse" data-target="#bar2-a"><i class="fa fa-envelope" aria-hidden="true"></i>
+ Email
+																
+																
+																<i class="fa fa-fw fa-chevron-down"></i>
+                                                                <i class="fa fa-fw fa-chevron-right"></i>
+																
+																</a>
+									<ul class="collapse" id="bar2-a">
+										<li>
+											<div class="pretty p-default">
+												<input type="checkbox" />
+												<div class="state p-info">
+													<label>Option A</label>
+												</div>
+											</div>
+										</li>
+										<li>
+											<div class="pretty p-default">
+												<input type="checkbox" />
+												<div class="state p-info">
+													<label>Option B</label>
+												</div>
+											</div>
+										</li>
+									</ul>
+								</div>
+								<div class="col-md-2 mid_coll"> <a href="javascript:void(0);" class="collapsed btn btn_new1" data-toggle="collapse" data-target="#bar3-a"><i class="fa fa-comments" aria-hidden="true"></i>
+ SMS
+																
+																
+																<i class="fa fa-fw fa-chevron-down"></i>
+                                                                <i class="fa fa-fw fa-chevron-right"></i>
+																
+																</a>
+									<ul class="collapse" id="bar3-a">
+										<li>
+											<div class="pretty p-default">
+												<input type="checkbox" />
+												<div class="state p-info">
+													<label>Option A</label>
+												</div>
+											</div>
+										</li>
+										<li>
+											<div class="pretty p-default">
+												<input type="checkbox" />
+												<div class="state p-info">
+													<label>Option B</label>
+												</div>
+											</div>
+										</li>
+									</ul>
+								</div>
+								<div class="col-md-2 mid_coll"> <a href="javascript:void(0);" class="collapsed btn btn_new1" data-toggle="collapse" data-target="#bar4-a"><i class="fa fa-clock-o" aria-hidden="true"></i>
+ Set Reminder
+																
+																
+																<i class="fa fa-fw fa-chevron-down"></i>
+                                                                <i class="fa fa-fw fa-chevron-right"></i>
+																
+																</a>
+									<ul class="collapse" id="bar4-a">
+										<li>
+											<div class="pretty p-default">
+												<input type="checkbox" />
+												<div class="state p-info">
+													<label>Option A</label>
+												</div>
+											</div>
+										</li>
+										<li>
+											<div class="pretty p-default">
+												<input type="checkbox" />
+												<div class="state p-info">
+													<label>Option B</label>
+												</div>
+											</div>
+										</li>
+									</ul>
+								</div>
+								<div class="col-md-2">
+									<div class="form-group">
+										<select class="form-control" id="sel1">
+											<option>Sort By</option>
+											<option>Date</option>
+											<option>File Size</option>
+										</select>
+									</div>
+								</div>
+								<div class="clearfix"></div>
+							</div>
+							<div class="clearfix"></div>
+						</div>
+						<div class="clearfix"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			
+			<div class="col-md-12">
+				
+				<div class="scrollbar" id="style-4"> 
+					<div class="candidate_box pb-20">
+							<div class="row">
+								<div class="col-md-8">
+									
+									
+									<div class="can_right_detail hidden-lg hidden-md"> <img src="{{ url_for('static', filename='images/person2.jpg') }}" class="img-responsive center-block visible-hide"  alt="" />
+									<div class="clearfix"></div>
+									<p class="visible-hide">SQL Database Administrator at
+										<br/> ABC Pvt Ltd</p>
+									<div class="clearfix"></div> <a href="#" class="btn btn_new1">Verifiy</a>
+									
+									</div>
+									
+									
+									<div class="clearfix"></div>
+									<div class="row can_details">
+										<div class="col-xs-4 col-md-3 can_details_left">
+											<p> Subject</p>
+										</div>
+										<div class="col-xs-8 col-md-9">
+											<p>Ally for the job</p>
+										</div>
+										<div class="clearfix"></div>
+									</div>
+									<div class="clearfix"></div>
+									<div class="row can_details">
+										<div class="col-xs-4 col-md-3 can_details_left">
+											<p>Mail</p>
+										</div>
+										<div class="col-xs-8 col-md-9">
+											<p>Testing@gmail.com</p>
+										</div>
+										<div class="clearfix"></div>
+									</div>
+									<div class="clearfix"></div>
+									<div class="row can_details">
+										<div class="col-xs-4 col-md-3 can_details_left">
+											<p>Time</p>
+										</div>
+										<div class="col-xs-8 col-md-9">
+											<p>09-35:00 PM</p>
+										</div>
+										<div class="clearfix"></div>
+									</div>
+									<div class="clearfix"></div>
+									
+									<div class="clearfix"></div>
+									<div class="row can_details">
+										<div class="col-xs-4 col-md-3 can_details_left">
+											<p>FIle Name</p>
+										</div>
+										<div class="col-xs-8 col-md-9">
+											
+											Download/job-protal/resume.doc
+										</div>
+										<div class="clearfix"></div>
+									</div>
+									<div class="clearfix"></div>
+								</div>
+								<div class="col-md-4 right-align hidden-sm hidden-xs"> 
+									<div class="clearfix"></div>
+									<div class="clearfix text-right"></div> <a href="#" class="btn btn-danger">Remove</a>
+									
+									
+								</div>
+								
+								<div class="clearfix"></div>
+							</div>
+							<div class="clearfix"></div>
+							
+						</div>
+						
+						<div class="candidate_box pb-20">
+							<div class="row">
+								<div class="col-md-8">
+									
+									
+									<div class="can_right_detail hidden-lg hidden-md"> <img src="{{ url_for('static', filename='images/person2.jpg') }}" class="img-responsive center-block visible-hide"  alt="" />
+									<div class="clearfix"></div>
+									<p class="visible-hide">SQL Database Administrator at
+										<br/> ABC Pvt Ltd</p>
+									<div class="clearfix"></div> <a href="#" class="btn btn_new1">Verifiy</a>
+									
+									</div>
+									
+									
+									<div class="clearfix"></div>
+									<div class="row can_details">
+										<div class="col-xs-4 col-md-3 can_details_left">
+											<p> Subject</p>
+										</div>
+										<div class="col-xs-8 col-md-9">
+											<p>Ally for the job</p>
+										</div>
+										<div class="clearfix"></div>
+									</div>
+									<div class="clearfix"></div>
+									<div class="row can_details">
+										<div class="col-xs-4 col-md-3 can_details_left">
+											<p>Mail</p>
+										</div>
+										<div class="col-xs-8 col-md-9">
+											<p>Testing@gmail.com</p>
+										</div>
+										<div class="clearfix"></div>
+									</div>
+									<div class="clearfix"></div>
+									<div class="row can_details">
+										<div class="col-xs-4 col-md-3 can_details_left">
+											<p>Time</p>
+										</div>
+										<div class="col-xs-8 col-md-9">
+											<p>09-35:00 PM</p>
+										</div>
+										<div class="clearfix"></div>
+									</div>
+									<div class="clearfix"></div>
+									
+									<div class="clearfix"></div>
+									<div class="row can_details">
+										<div class="col-xs-4 col-md-3 can_details_left">
+											<p>FIle Name</p>
+										</div>
+										<div class="col-xs-8 col-md-9">
+											
+											Download/job-protal/resume.doc
+										</div>
+										<div class="clearfix"></div>
+									</div>
+									<div class="clearfix"></div>
+								</div>
+								<div class="col-md-4 right-align hidden-sm hidden-xs"> 
+									<div class="clearfix"></div>
+									<div class="clearfix text-right"></div> <a href="#" class="btn btn-danger">Remove</a>
+									
+									
+								</div>
+								
+								<div class="clearfix"></div>
+							</div>
+							<div class="clearfix"></div>
+							
+						</div>
+						
+						<div class="candidate_box pb-20">
+							<div class="row">
+								<div class="col-md-8">
+									
+									
+									<div class="can_right_detail hidden-lg hidden-md"> <img src="{{ url_for('static', filename='images/person2.jpg') }}" class="img-responsive center-block visible-hide"  alt="" />
+									<div class="clearfix"></div>
+									<p class="visible-hide">SQL Database Administrator at
+										<br/> ABC Pvt Ltd</p>
+									<div class="clearfix"></div> <a href="#" class="btn btn_new1">Verifiy</a>
+									
+									</div>
+									
+									
+									<div class="clearfix"></div>
+									<div class="row can_details">
+										<div class="col-xs-4 col-md-3 can_details_left">
+											<p> Subject</p>
+										</div>
+										<div class="col-xs-8 col-md-9">
+											<p>Ally for the job</p>
+										</div>
+										<div class="clearfix"></div>
+									</div>
+									<div class="clearfix"></div>
+									<div class="row can_details">
+										<div class="col-xs-4 col-md-3 can_details_left">
+											<p>Mail</p>
+										</div>
+										<div class="col-xs-8 col-md-9">
+											<p>Testing@gmail.com</p>
+										</div>
+										<div class="clearfix"></div>
+									</div>
+									<div class="clearfix"></div>
+									<div class="row can_details">
+										<div class="col-xs-4 col-md-3 can_details_left">
+											<p>Time</p>
+										</div>
+										<div class="col-xs-8 col-md-9">
+											<p>09-35:00 PM</p>
+										</div>
+										<div class="clearfix"></div>
+									</div>
+									<div class="clearfix"></div>
+									
+									<div class="clearfix"></div>
+									<div class="row can_details">
+										<div class="col-xs-4 col-md-3 can_details_left">
+											<p>FIle Name</p>
+										</div>
+										<div class="col-xs-8 col-md-9">
+											
+											Download/job-protal/resume.doc
+										</div>
+										<div class="clearfix"></div>
+									</div>
+									<div class="clearfix"></div>
+								</div>
+								<div class="col-md-4 right-align hidden-sm hidden-xs"> 
+									<div class="clearfix"></div>
+									<div class="clearfix text-right"></div> <a href="#" class="btn btn-danger">Remove</a>
+									
+									
+								</div>
+								
+								<div class="clearfix"></div>
+							</div>
+							<div class="clearfix"></div>
+							
+						</div>
+					</div>
+
+				<div class="col-md-12 text-center mt-50 mb-50">
+					<button type="button" class="btn btn-primary">Start Prasing</button>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+		<div class="clearfix"></div>
+	</div>
+	<footer>
+		<div class="container">
+			<div class="row footer3">
+				<div class="col-md-3">
+					<h4>About</h4>
+					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy when an unknown printer took a galley of type and specimen book. </p>
+				</div>
+				<div class="col-md-3">
+					<h4>Links</h4>
+					<ul>
+						<li><a href="#">Link 1</a></li>
+						<li><a href="#">Link 2</a></li>
+						<li><a href="#">Link 3</a></li>
+						<li><a href="#">Link 4</a></li>
+					</ul>
+				</div>
+				<div class="col-md-3">
+					<h4>Quick Links</h4>
+					<ul>
+						<li><a href="#">Link 1</a></li>
+						<li><a href="#">Link 2</a></li>
+						<li><a href="#">Link 3</a></li>
+						<li><a href="#">Link 4</a></li>
+					</ul>
+				</div>
+				<div class="col-md-3">
+					<h4>Reach Us On</h4>
+					<ul class="soc">
+						<li>
+							<a href="#"><img src="{{ url_for('static', filename='images/f1.png') }}" class="img-responsive" alt="" /></a>
+						</li>
+						<li>
+							<a href="#"><img src="{{ url_for('static', filename='images/in1.png') }}" class="img-responsive" alt="" /></a>
+						</li>
+						<li>
+							<a href="#"><img src="{{ url_for('static', filename='images/t1n.png') }}" class="img-responsive" alt="" /></a>
+						</li>
+						<li>
+							<a href="#"><img src="{{ url_for('static', filename='images/li1.png') }}" class="img-responsive" alt="" /></a>
+						</li>
+						<li>
+							<a href="#"><img src="{{ url_for('static', filename='images/yo1.png') }}" class="img-responsive" alt="" /></a>
+						</li>
+						<li>
+							<a href="#"><img src="{{ url_for('static', filename='images/te1.png') }}" class="img-responsive" alt="" /></a>
+						</li>
+					</ul>
+					<div class="app_lower">
+						<h6>Join Us On</h6>
+						<div class="clearfix"></div>
+						<a href="#"><img src="{{ url_for('static', filename='images/app1.png') }}" class="img-responsive" alt="" /></a>
+						<a href="#"><img src="{{ url_for('static', filename='images/app2.png') }}" class="img-responsive" alt="" /></a>
+					</div>
+				</div>
+			</div>
+			<div class="row footer4">
+				<div class="col-md-12 text-center">
+					<p>Copyright &copy; 2023 S.I International. All Rights Reserved</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<script src="https://code.jquery.com/jquery-3.2.0.min.js"></script>
+	<script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+	<script type="text/javascript" src="{{ url_for('static', filename='js/custom.js') }}"></script>
+	<script type="text/javascript" src="{{ url_for('static', filename='js/droopmenu.js') }}"></script>
+	<script type="text/javascript">
+		/*	--------------------------------------------------
+																															:: Initialize menu
+																															-------------------------------------------------- */
+		jQuery(function ($) {
+			$('.droopmenu-navbar').droopmenu({
+				dmArrow: true
+				, dmOffCanvas: true
+				, dmOffCanvasPos: 'dmoffleft'
+				, dmArrowDirection: 'dmarrowup'
+			});
+		});
+	</script>
+	<script src="{{ url_for('static', filename='js/jquery.tabSlideOut.js') }}" type="text/javascript"></script>
+	<script src="{{ url_for('static', filename='js/wow.js') }}"></script>
+	<script>
+		new WOW().init();
+	</script>
+	<script src="{{ url_for('static', filename='js/jquery.fancybox.min.js') }}"></script>
+	<script type="text/javascript">
+		$("[data-fancybox]").fancybox({
+			selector: '[data-fancybox="images"]'
+			, loop: true
+		});
+		$.fancybox.defaults.buttons = [
+			  'slideShow'
+				, 'zoom'
+			  , 'thumbs'
+			  , 'fullScreen'
+			  , 'close'
+			];
+	</script>
+	<script src="{{ url_for('static', filename='js/owl.carousel.js') }}"></script>
+	<script type="text/javascript">
+		$(document).ready(function () {
+			var owl = $("#owl-demo6");
+			owl.owlCarousel({
+				items: 3, //10 items above 1000px browser width
+				itemsDesktop: [1000, 3], //5 items between 1000px and 901px
+				itemsDesktopSmall: [900, 2], // betweem 900px and 601px
+				itemsTablet: [600, 2], //2 items between 600 and 0
+				autoPlay: 30000
+				, rewindNav: true
+				, rewindSpeed: 0
+				, pagination: false
+				, itemsMobile: [479, 1] // itemsMobile disabled - inherit from itemsTablet option
+			});
+			// Custom Navigation Events
+			$(".next6").click(function () {
+				owl.trigger('owl.next');
+			})
+			$(".prev6").click(function () {
+				owl.trigger('owl.prev');
+			})
+			$(".play1").click(function () {
+				owl.trigger('owl.play', 1000); //owl.play event accept autoPlay speed as second parameter
+			})
+			$(".stop1").click(function () {
+				owl.trigger('owl.stop');
+			})
+		});
+	</script>
+	<script src="{{ url_for('static', filename='js/waypoints.min.js') }}" type="text/javascript"></script>
+	<script src="{{ url_for('static', filename='js/jquery.counterup.min.js') }}" type="text/javascript"></script>
+	<script>
+		jQuery(document).ready(function ($) {
+			$('.number_box span').counterUp({
+				delay: 10, // the delay time in ms
+				time: 1000 // the speed time in ms
+			});
+		});
+	</script>
+	<script type="text/javascript">
+		$(document).ready(function () {
+			$(".mCustomScrollbar").mCustomScrollbar({
+				axis: "x"
+			});
+		});
+	</script>
+	<script src="{{ url_for('static', filename='js/jquery.easing.min.js') }}"></script>
+	<script type="text/javascript">
+		$(document).ready(function () {
+			if ($(window).width() > 300) {
+				var Uniform = {
+					Boot: function () {
+						var b = 0;
+						$("*[data-uniform=true]").each(function () {
+							if ($(this).height() > b) {
+								b = $(this).height();
+							}
+						});
+						$("*[data-uniform=true]").height(b);
+					}
+				};
+				$(function () {
+					Uniform.Boot();
+				});
+			}
+		});
+	</script>
+	<script type="text/javascript">
+		$(document).ready(function () {
+			if ($(window).width() > 300) {
+				var Uniform = {
+					Boot: function () {
+						var b = 0;
+						$("*[data-uniform=true2]").each(function () {
+							if ($(this).height() > b) {
+								b = $(this).height();
+							}
+						});
+						$("*[data-uniform=true2]").height(b);
+					}
+				};
+				$(function () {
+					Uniform.Boot();
+				});
+			}
+		});
+	</script>
+	<script type="text/javascript">
+		$(document).ready(function () {
+			if ($(window).width() > 300) {
+				var Uniform = {
+					Boot: function () {
+						var b = 0;
+						$("*[data-uniform=true2b]").each(function () {
+							if ($(this).height() > b) {
+								b = $(this).height();
+							}
+						});
+						$("*[data-uniform=true2b]").height(b);
+					}
+				};
+				$(function () {
+					Uniform.Boot();
+				});
+			}
+		});
+	</script>
+	<script type="text/javascript">
+		$(document).ready(function () {
+			if ($(window).width() > 992) {
+				var Uniform = {
+					Boot: function () {
+						var b = 0;
+						$("*[data-uniform=true3]").each(function () {
+							if ($(this).height() > b) {
+								b = $(this).height();
+							}
+						});
+						$("*[data-uniform=true3]").height(b);
+					}
+				};
+				$(function () {
+					Uniform.Boot();
+				});
+			}
+		});
+	</script>
+	<script type="text/javascript">
+		$(document).ready(function () {
+			if ($(window).width() > 992) {
+				var Uniform = {
+					Boot: function () {
+						var b = 0;
+						$("*[data-uniform=true4]").each(function () {
+							if ($(this).height() > b) {
+								b = $(this).height();
+							}
+						});
+						$("*[data-uniform=true4]").height(b);
+					}
+				};
+				$(function () {
+					Uniform.Boot();
+				});
+			}
+		});
+	</script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script type="text/javascript">
+		$(function () {
+			$("#datepicker").datepicker({
+				dateFormat: "dd-mm-yy"
+				, duration: "fast"
+			});
+		});
+	</script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script>
+		var a = 0;
+		$(window).scroll(function () {
+			var oTop = $('#counter').offset().top - window.innerHeight;
+			if (a == 0 && $(window).scrollTop() > oTop) {
+				$('.counter-value').each(function () {
+					var $this = $(this)
+						, countTo = $this.attr('data-count');
+					$({
+						countNum: $this.text()
+					}).animate({
+						countNum: countTo
+					}, {
+						duration: 2000
+						, easing: 'swing'
+						, step: function () {
+							$this.text(Math.floor(this.countNum));
+						}
+						, complete: function () {
+							$this.text(this.countNum);
+							//alert('finished');
+						}
+					});
+				});
+				a = 1;
+			}
+		});
+	</script>
+	<div class="modal fade advert_modal" id="myModal_login" role="dialog">
+		<div class="modal-dialog">
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+				</div>
+				<div class="modal-body">
+					<div class="login_wrap login_box">
+						<div class="login_text">
+							<h4>You're almost there.</h4>
+							<h6>We need some details to keep in contact with you</h6> </div>
+						<ul class="nav nav-pills nav-justified">
+							<li class="active"><a data-toggle="pill" href="#customer">Login</a></li>
+							<li><a data-toggle="pill" href="#agency">Register</a></li>
+						</ul>
+						<div class="tab-content">
+							<div id="customer" class="tab-pane fade in active">
+								<form action="/action_page.php" class="form_div_outer">
+									<div class="form-group">
+										<label for="email">Email address:</label>
+										<input type="email" class="form-control" id="email" placeholder="Enter Email Address"> </div>
+									<div class="form-group">
+										<label for="email">Phone:</label>
+										<input type="email" class="form-control" id="email" placeholder="Enter Phone Number"> </div>
+									<div class="form-group">
+										<label for="email">Username:</label>
+										<input type="email" class="form-control" id="email" placeholder="Enter Username"> </div>
+									<div class="form-group">
+										<label for="pwd">Password:</label>
+										<div class="pass_wrap">
+											<input type="password" class="form-control" id="pwd" placeholder="Enter Password">
+											<div class="pass_text">
+												<p>SHOW</p>
+											</div>
+										</div>
+									</div> <a href="javascript:void(0);" class="forgot" data-toggle="collapse" data-target="#fgot2">Forgot Password?</a>
+									<div id="fgot2" class="collapse">
+										<h6>We shall send a re-activation link to your email address</h6>
+										<div class="form-group">
+											<input type="text" class="form-control" placeholder="Enter Email Address"> </div>
+										<button class="btn btn_new1">Submit</button>
+									</div>
+									<div class="checkbox">
+										<label>
+											<input type="checkbox"> I have read & agreed to <a href="#">Terms</a> & <a href="#">Privacy Policy</a> </label>
+									</div>
+									<div class="login_lower">
+										<button type="submit" class="btn btn_new1">Submit</button>
+									</div>
+								</form>
+								<div class="clearfix"></div>
+								<div class="reg_link">
+									<p>If you dont have any account then register here - <a href="#agency" class="link-to-tab">Register</a></p>
+								</div>
+							</div>
+							<div id="agency" class="tab-pane fade">
+								<form action="/action_page.php" class="form_div_outer">
+									<div class="form-group">
+										<label for="email">Username:</label>
+										<input type="email" class="form-control" id="email" placeholder="Enter Username">
+										<h6>Username is required*</h6> </div>
+									<div class="form-group">
+										<label for="email">Email address:</label>
+										<input type="email" class="form-control" id="email" placeholder="Enter Email Address"> </div>
+									<div class="form-group">
+										<label for="pwd">New Password:</label>
+										<div class="pass_wrap">
+											<input type="password" class="form-control" id="pwd" placeholder="New Password">
+											<div class="pass_text">
+												<p>SHOW</p>
+											</div>
+										</div>
+									</div>
+									<div class="form-group">
+										<label for="pwd">Confirm Password:</label>
+										<div class="pass_wrap">
+											<input type="password" class="form-control" id="pwd" placeholder="Enter Password">
+											<div class="pass_text">
+												<p>SHOW</p>
+											</div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-md-12">
+											<h5>Birthday</h5> </div>
+										<div class="col-md-4">
+											<div class="form-group">
+												<select class="form-control" id="sel1">
+													<option>Month</option>
+													<option>January</option>
+													<option>February</option>
+												</select>
+											</div>
+										</div>
+										<div class="col-md-4">
+											<div class="form-group">
+												<select class="form-control" id="sel1">
+													<option>Day</option>
+													<option>1</option>
+													<option>2</option>
+												</select>
+											</div>
+										</div>
+										<div class="col-md-4">
+											<div class="form-group">
+												<select class="form-control" id="sel1">
+													<option>Year</option>
+													<option>1990</option>
+													<option>1991</option>
+												</select>
+											</div>
+										</div>
+										<div class="clearfix"></div>
+									</div>
+									<div class="clearfix"></div>
+									<div class="checkbox">
+										<label>
+											<input type="checkbox"> I have read & agreed to <a href="#">Terms</a> & <a href="#">Privacy Policy</a> </label>
+									</div>
+									<div class="login_lower">
+										<button type="submit" class="btn btn_new1">Submit</button>
+									</div>
+								</form>
+							</div>
+						</div>
+						<div class="clearfix"></div>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn_new1" data-dismiss="modal">CLOSE</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="scroll-top-wrapper"> <span class="scroll-top-inner">
+    <img src="{{ url_for('static', filename='images/return2.png') }}" class="img-responsive"/>
+  </span> </div>
+  <script>
+  $('.btn-toggle').click(function() {
+    $(this).find('.btn').toggleClass('active');  
+    
+    if ($(this).find('.btn-primary').size()>0) {
+    	$(this).find('.btn').toggleClass('btn-primary');
+    }
+    if ($(this).find('.btn-danger').size()>0) {
+    	$(this).find('.btn').toggleClass('btn-danger');
+    }
+    if ($(this).find('.btn-success').size()>0) {
+    	$(this).find('.btn').toggleClass('btn-success');
+    }
+    if ($(this).find('.btn-info').size()>0) {
+    	$(this).find('.btn').toggleClass('btn-info');
+    }
+    
+    $(this).find('.btn').toggleClass('btn-default');
+       
+});
+
+$('form').submit(function(){
+	alert($(this["options"]).val());
+    return false;
+});
+  </script>
+  <script>
+	$(".toggle-password").click(function() {
+
+$(this).toggleClass("fa-eye fa-eye-slash");
+var input = $($(this).attr("toggle"));
+if (input.attr("type") == "password") {
+  input.attr("type", "text");
+} else {
+  input.attr("type", "password");
+}
+});
+$(".toggle-password1").click(function() {
+
+$(this).toggleClass("fa-eye fa-eye-slash");
+var input = $($(this).attr("toggle"));
+if (input.attr("type") == "password") {
+  input.attr("type", "text");
+} else {
+  input.attr("type", "password");
+}
+});
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,464 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+
+
+
+.event_list{color: #fff;}
+
+
+
+
+
+
+
+
+
+.modal_cal{z-index: 999999;}
+
+
+
+
+
+.disable-selection {
+	-moz-user-select: none;
+	/* Firefox */
+	-ms-user-select: none;
+	/* Internet Explorer */
+	-khtml-user-select: none;
+	/* KHTML browsers (e.g. Konqueror) */
+	-webkit-user-select: none;
+	/* Chrome, Safari, and Opera */
+	-webkit-touch-callout: none;
+	/* Disable Android and iOS callouts*/
+}
+
+.calendar,
+.calendar .add-event-day .add-event-day-field-btn,
+.calendar .calendar-days li:after {
+	position: relative;
+	margin-bottom: 50px;
+}
+
+
+
+
+
+
+.calendar {
+	background: #fff;
+	width: 100%;
+
+	
+}
+
+.calendar .calendar-left-side-day-of-week,
+.calendar .current-day-events ul,
+.calendar .add-event-day,
+.calendar .calendar-change-year,
+.calendar .calendar-days li {
+	position: relative;
+}
+
+.calendar .calendar-left-side-day,
+.calendar .calendar-left-side-day-of-week,
+.calendar .current-day-events,
+.calendar .add-event-day-field-btn,
+.calendar .add-event-day-field {
+	color: white;
+}
+
+.calendar .calendar-left-side-day-of-week,
+.calendar .calendar-week {
+	text-transform: uppercase;
+}
+
+
+.calendar .left-side {
+	padding: 10px;
+	height: 100%;
+}
+
+
+
+.calendar .right-side {
+	padding: 10px;
+	height: 100%;
+}
+
+
+
+
+.calendar .left-side {
+	width:auto;
+	
+	float: none; 
+	
+}
+
+.left_info{ padding-left: 0; padding-right: 0;background: #3368c6; display: none;}
+
+.timimg_table table thead tr th{ text-align: center;}
+
+
+.right_info{background: #fff;}
+
+
+
+
+
+
+.calendar .current-day,
+.calendar .current-day-events {
+	padding-top: 0;
+}
+
+.calendar .current-day-events {
+	height: 215px;
+}
+
+.calendar .current-day-events ul {
+	padding-left: 30px;
+	list-style: none;
+}
+
+.calendar .current-day-events ul li::before {
+	content: '-';
+	position: absolute;
+	left: 3px;
+}
+
+.calendar h1.calendar-left-side-day {
+	font-size: 92px;
+}
+
+.calendar .add-event-day {
+	border-bottom: 1px solid white;
+}
+
+.calendar .add-event-day .add-event-day-field {
+	border: none;
+	background: transparent;
+	height: 34px;
+	width: 100%;
+	font-size: 16px;
+	padding-right: 30px;
+}
+
+.calendar .add-event-day .add-event-day-field:focus {
+	outline: none;
+}
+
+.calendar .add-event-day .add-event-day-field::placeholder {
+	color: #ccc;
+}
+
+.calendar .add-event-day .add-event-day-field-btn {
+	left: inherit;
+	line-height: 34px;
+}
+
+.calendar .right-side {
+	width:auto;
+	float: none;
+}
+
+.calendar .calendar-change-year {
+	font-size: 20px;
+}
+
+.calendar .calendar-change-year .calendar-change-year-slider {
+	margin: 15px 0;
+	color: #737373;
+}
+
+.calendar .calendar-change-year .calendar-change-year-slider .fa:hover {
+	color: #404040;
+}
+
+.calendar .calendar-days,
+.calendar .calendar-week,
+.calendar .calendar-month {
+	list-style: none;
+	font-size: 0;
+}
+
+.calendar .calendar-days li,
+.calendar .calendar-week li,
+.calendar .calendar-month li {
+	display: inline-block;
+	text-align: center;
+	cursor: pointer;
+	font-size: 16px;
+}
+
+.calendar .calendar-month li {
+	width: calc(460px / 12);
+	height: 30px;
+	line-height: 30px;
+	color: #868686;
+	font-size: 13px;
+}
+
+.calendar .calendar-month li.active {
+	color: #171717;
+	font-weight: 600;
+}
+
+.calendar .calendar-days li {
+	width:13.3%;;
+	height: 50px;
+	line-height: 50px;
+}
+
+.calendar .calendar-days li:after {
+	content: attr(data-day);
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	color: #959595;
+}
+
+.calendar .calendar-days li.another-month:after {
+	color: #ccc;
+}
+
+.calendar .calendar-days li:hover:after,
+.calendar .calendar-days li.selected-day:after,
+.calendar .calendar-days li.event-day:before,
+.calendar .calendar-days li.active-day:after {
+	border-radius: 50%;
+}
+
+.calendar .calendar-days li:hover:after,
+.calendar .calendar-days li.selected-day:after {
+	background: #ccc;
+	color: white;
+}
+
+.calendar .calendar-days li.event-day:before {
+	content: ' ';
+	width: 5px;
+	height: 5px;
+	position: absolute;
+	top: 7px;
+	right: 7px;
+	background: #1400c7;
+}
+
+.calendar .calendar-days li.active-day:after {
+	color: white;
+	background: #3368c6;
+}
+
+.calendar .calendar-week {
+	margin-bottom: 30px;
+	font-weight: 600; text-align: center;
+	color: #737373;
+	border-top: 1px solid #ccc;
+}
+
+.calendar .calendar-week li {
+	width: calc(514px / 7);
+	height: 30px;
+	line-height: 30px;
+}
+
+
+
+
+
+
+.o-checkbox {
+  width: 30px;
+  position: relative; display: inline-block;
+}
+.o-checkbox input[type=checkbox] {
+  visibility: hidden;
+}
+.o-checkbox input[type=checkbox]:checked + label:after {
+  opacity: 1;
+}
+.o-checkbox input[type=checkbox][disabled] + label {
+  background-color: #ddd;
+}
+.o-checkbox label {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  position: absolute;
+  top: 2px;
+  left: 5px;
+  background: #FBFFFE;
+  border: 1px solid #D1D1D1;
+  border-radius: 4px;
+}
+.o-checkbox label:after {
+  content: "";
+  width: 15px;
+  height: 9px;
+  position: absolute;
+  top: 3px;
+  left: 2px;
+  border:3px solid #f39200;
+  border-top: none;
+  border-right: none;
+  background: transparent;
+  opacity: 0;
+  transform: rotate(-45deg);
+  color: #f39200;
+}
+
+.o-checkbox {
+  align-self: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media(min-width:992px){
+
+.aligned-row-calender {
+    display: flex;
+    flex-flow: row wrap;
+
+    &::before {
+        display: block;
+    }
+}  /* –– For Equal Height –– */
+
+
+
+}
+
+
+@media(max-width:1300px){
+	
+	
+	.calendar .calendar-days li {
+	width: 13.5%;
+	height: 50px;
+	line-height: 50px;
+}
+	
+	.calendar .calendar-week li {
+	width: 13.5%;
+	height: 30px;
+	line-height: 30px;
+}
+	
+	
+	
+}
+
+
+
+
+@media(max-width:992px){
+	
+	.calendar-month-list{ text-align: center;}
+	.calendar .calendar-change-year {
+
+    text-align: center;
+
+}
+	
+}
+
+
+@media(max-width:767px){
+	
+	
+	.timimg_table .table > tbody > tr > td,timimg_table .table > tfoot > tr > td, timimg_table .table > thead > tr > td{
+
+    padding:8px;
+    
+    font-size: 12px; width: 20%;
+
+}
+	
+	.o-checkbox {
+ 
+  position: relative; display: block; margin: 0 auto;
+}
+	
+	
+	
+	.calendar .left-side {
+
+    padding: 20px 10px;
+    
+
+}
+	
+	
+	.timimg_table table thead tr th{ font-size: 10px; padding: 7px 2px;}
+	
+}
+
+
+@media(max-width:479px){
+
+.right_info{padding-left: 0; padding-right: 0;}
+.calendar .calendar-days li,
+.calendar .calendar-week li,
+.calendar .calendar-month li {
+	
+	font-size: 14px;
+}
+
+	
+	
+	
+	
+	
+	
+	
+	
+	.left_info{width: 100%;}
+	
+	
+	.timimg_table .table > tbody > tr > td,timimg_table .table > tfoot > tr > td, timimg_table .table > thead > tr > td{
+
+   
+    
+    font-size: 11px; 
+
+}
+	
+	
+	
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
